@@ -11,7 +11,7 @@ class FavouriteSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
-        model = Like
+        model = Favourite
         fields = ['id', 'created_at', 'owner', 'resource']
 
     def create(self, validated_data):
