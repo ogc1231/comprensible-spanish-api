@@ -38,6 +38,7 @@ class Resource(models.Model):
 
     difficulty_level_filter_choices = [
         ('all', 'All'),
+        ('learner', 'Learner'),
         ('easy_native', 'Easy Native'),
         ('native', 'Native'),
     ]
