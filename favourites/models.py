@@ -7,7 +7,8 @@ class Favourite(models.Model):
     """
     Favourite model, related to 'owner' and 'resource'.
     'owner' is a User instance and 'resource' is a Resource instance.
-    'unique_together' makes sure a user can't favourite the same resource twice.
+    'unique_together' makes sure a user can't favourite the same
+    resource twice.
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     resource = models.ForeignKey(

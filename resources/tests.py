@@ -33,10 +33,14 @@ class ResourceDetailViewTests(APITestCase):
         adam = User.objects.create_user(username='adam', password='pass')
         brian = User.objects.create_user(username='brian', password='pass')
         Resource.objects.create(
-            owner=adam, title='a title', description='adams content', resource_url='www.dog.com'
+            owner=adam, title='a title',
+            description='adams content',
+            resource_url='www.dog.com'
         )
         Resource.objects.create(
-            owner=brian, title='another title', description='brians content', resource_url='www.cat.com'
+            owner=brian, title='another title',
+            description='brians content',
+            resource_url='www.cat.com'
         )
 
     def test_can_retrieve_resource_using_valid_id(self):
