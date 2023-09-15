@@ -32,8 +32,8 @@ class Resource(models.Model):
 
     resource_type_filter_choices = [
         ('all', 'All'),
-        ('podcast_audio', 'Podcast - Audio'),
-        ('youtube_video', 'YouTube - Video'),
+        ('podcast', 'Podcast - Audio'),
+        ('youtube', 'YouTube - Video'),
     ]
 
     difficulty_level_filter_choices = [

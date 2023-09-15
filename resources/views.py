@@ -13,11 +13,19 @@ class ResourceList(generics.ListCreateAPIView):
         favourites_count=Count('favourites', distinct=True),
     ).order_by('-created_at')
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        filters.SearchFilter,
+    ]
+    search_fields = [
+        'owner__username',
+        'title',
+        'country_filter',
     ]
     ordering_fields = [
         'favourites_count',
         'favourites__created_at',
+        'resource_type_filter',
+        'difficulty_level_filter',
     ]
 
     def perform_create(self, serializer):
