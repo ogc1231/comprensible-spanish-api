@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 class Resource(models.Model):
 
     country_filter_choices = [
-        ('all', 'All'),
         ('mixed', 'Mixed'),
         ('argentina', 'Argentina'),
         ('bolivia', 'Bolivia'),
@@ -31,13 +30,11 @@ class Resource(models.Model):
     ]
 
     resource_type_filter_choices = [
-        ('all', 'All'),
         ('podcast', 'Podcast - Audio'),
         ('youtube', 'YouTube - Video'),
     ]
 
     difficulty_level_filter_choices = [
-        ('all', 'All'),
         ('learner', 'Learner'),
         ('easy_native', 'Easy Native'),
         ('native', 'Native'),
