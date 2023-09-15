@@ -41,6 +41,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '8000-ogc1231-comprensiblespa-u169fvemnfc.ws-eu104.gitpod.io']  # noqa
 
+CLIENT_ORIGIN_DEV = [os.environ.get('CLIENT_ORIGIN')]
 
 # Application definition
 
