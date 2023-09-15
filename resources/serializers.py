@@ -9,6 +9,7 @@ class ResourceSerializer(serializers.ModelSerializer):
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     favourite_id = serializers.SerializerMethodField()
+    favourites_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -44,4 +45,5 @@ class ResourceSerializer(serializers.ModelSerializer):
             'title', 'image', 'resource_url',
             'country_filter', 'resource_type_filter',
             'difficulty_level_filter', 'favourite_id',
+            'favourites_count',
         ]
