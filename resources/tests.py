@@ -34,12 +34,12 @@ class ResourceDetailViewTests(APITestCase):
         brian = User.objects.create_user(username='brian', password='pass')
         Resource.objects.create(
             owner=adam, title='a title',
-            description='adams content',
+            desc ='adams content',
             resource_url='www.dog.com'
         )
         Resource.objects.create(
             owner=brian, title='another title',
-            description='brians content',
+            desc ='brians content',
             resource_url='www.cat.com'
         )
 

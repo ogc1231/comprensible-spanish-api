@@ -45,5 +45,5 @@ class ResourceSerializer(serializers.ModelSerializer):
             'title', 'image', 'resource_url',
             'country_filter', 'resource_type_filter',
             'difficulty_level_filter', 'favourite_id',
-            'favourites_count', 'description'
+            'favourites_count', 'desc'
         ]

@@ -26,12 +26,15 @@ class ResourceList(generics.ListCreateAPIView):
         'owner__username',
         'title',
         'country_filter',
+        'resource_type_filter',
+        'difficulty_level_filter',
     ]
     ordering_fields = [
         'favourites_count',
         'favourites__created_at',
         'resource_type_filter',
         'difficulty_level_filter',
+        'country_filter',
     ]
 
     def perform_create(self, serializer):

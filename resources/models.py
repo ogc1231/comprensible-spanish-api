@@ -44,7 +44,7 @@ class Resource(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
-    description = models.TextField(blank=True)
+    desc = models.TextField(blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_ve6bmd', blank=True
     )
