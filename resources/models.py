@@ -13,7 +13,7 @@ class Resource(models.Model):
         ('colombia', 'Colombia'),
         ('costa_rica', 'Costa Rica'),
         ('cuba', 'Cuba'),
-        ('dominican_republic', 'Dominican Republic'),
+        ('Dominican Republic', 'Dominican Republic'),
         ('ecuador', 'Ecuador'),
         ('el_salvador', 'El Salvador'),
         ('equatorial_guinea', 'Equatorial Guinea'),
