@@ -23,6 +23,7 @@ class Resource(models.Model):
         ('nicaragua', 'Nicaragua'),
         ('panama', 'Panama'),
         ('paraguay', 'Paraguay'),
+        ('puerto_rico', 'Puerto Rico'),
         ('peru', 'Peru'),
         ('spain', 'Spain'),
         ('uruguay', 'Uruguay'),
