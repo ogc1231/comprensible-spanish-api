@@ -39,7 +39,8 @@ class Resource(models.Model):
         ('beginner', 'Beginner'),
         ('intermediate', 'Intermediate'),
         ('advanced', 'Advanced'),
-        ('native', 'Native'),
+        ('easy_native', 'Easy Native'),
+        ('adv_native', 'Adv Native'),
     ]
 
     owner = models.ForeignKey(User, on_delete=models.PROTECT)
