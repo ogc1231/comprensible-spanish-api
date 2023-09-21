@@ -6,5 +6,5 @@ class ContactFormSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactForm
         fields = [
-            'id', 'name', 'email', 'message', 'created_at',
+            'id', 'name', 'email', 'subject', 'message', 'created_at',
         ]
