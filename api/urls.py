@@ -30,4 +30,5 @@ urlpatterns = [
     path('', include('profiles.urls')),
     path('', include('resources.urls')),
     path('', include('favourites.urls')),
+    path('', include('forms.urls')),
 ]

@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import generics, permissions, authentication
+from .models import ContactForm
+from .serializers import ContactFormSerializer
 
-# Create your views here.
+
+class ContactFormList(generics.ListCreateAPIView):
+    '''List all messages or create a new message'''
+    queryset = ContactForm.objects.all()
+    serializer_class = ContactFormSerializer
+    authentication_classes = [authentication.BasicAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
