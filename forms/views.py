@@ -8,5 +8,5 @@ class ContactFormList(generics.ListCreateAPIView):
     '''List all messages or create a new message'''
     queryset = ContactForm.objects.all()
     serializer_class = ContactFormSerializer
-    authentication_classes = [authentication.BasicAuthentication]
+    # authentication_classes = [authentication.BasicAuthentication]
     # permission_classes = [permissions.IsAuthenticated]
