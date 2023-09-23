@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'resources',
     'favourites',
     'forms',
+    'comments',
 ]
 
 SITE_ID = 1
