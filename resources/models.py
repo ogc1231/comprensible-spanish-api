@@ -51,7 +51,7 @@ class Resource(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_ve6bmd', blank=True
     )
-    resource_url = models.URLField(max_length=100, unique=True)
+    resource_url = models.URLField(max_length=255, unique=True)
     country_filter = models.CharField(
         max_length=32, choices=country_filter_choices, default='all'
     )
