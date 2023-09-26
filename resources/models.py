@@ -53,13 +53,13 @@ class Resource(models.Model):
     )
     resource_url = models.URLField(max_length=255, unique=True)
     country_filter = models.CharField(
-        max_length=32, choices=country_filter_choices, default='all'
+        max_length=32, choices=country_filter_choices
     )
     resource_type_filter = models.CharField(
-        max_length=32, choices=resource_type_filter_choices, default='all'
+        max_length=32, choices=resource_type_filter_choices,
     )
     difficulty_level_filter = models.CharField(
-        max_length=32, choices=difficulty_level_filter_choices, default='all'
+        max_length=32, choices=difficulty_level_filter_choices
     )
 
     class Meta:
