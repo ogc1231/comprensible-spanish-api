@@ -366,63 +366,83 @@ The following list will give a brief overview of the available API andpoints
 ## Features
 The following section describes the features of the API. The Djange REST Framework built in API browser is used to display snapshots of the individual features, as raw json is not as readable.
 
-
 ### Root Page
+This is where the user will be brought to when first entering the API application, they with welcomed with the following messsage "Welcome to my Comprehensible Spanish API!"
 
-![screenshot]()
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/root.png)
 
 ### Profile List Page
+List of created user profiles (profiles/)
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_list.png)
 
 ### Profile Detail Page
+Detailed view of an individual user profile (/profiles/id/)
+
+When the user in logged and viewing their own profile they can update their name and image. Non-authorised user can't edit any profile information.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_detail.png)
 
 ### Profile Filters
+Can order profiles in ascending or descending order.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_filter.png)
 
 ### Resource List Page
+List of all user created resources (resources/)
+Authenicated users can create and post new resoures in the html form at the bottom, this form is not avaiable for non-authorised users.
+Title and URL are required, while Country filter will default to mixed, Resource type filter will deafult to Podcast/Audio and Difficulty level filter will default to Beginner.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_list.png)
 
 ### Resource Detail Page
+Detailed view of an individual resource (resources/id/)
+Authenicated users can delete, edit and update their resoures in the html form at the bottom, this form is not avaiable for non-authorised users.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_detail.png)
 
 ### Resource Filters
+Resources has mutiple filters for ordering, searching and filter by field.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_filter.png)
 
 
 ### Favourite List Page
+List of all user created favourites (favourites/)
+Authenicated users can favourite any resource in the html form at the bottom, this form is not avaiable for non-authorised users.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/favourites_list.png)
 
 ### Favourite Detail Page
+Detailed view of an individual favourite (favourites/id/)
+Authenicated users can favourite can delete their own favourite from a resource, this is not avaiable for non-authorised users.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/favourites_detail.png)
 
-### Comment List Page
+### Comment List Pages
+List of all user created comments (comments/)
+Authenicated users can comment on any resource, this is not avaiable for non-authorised users.
+Content is a requirement before posting.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_list.png)
 
 ### Comment Detail
+Detailed view of an individual comment (comments/id/)
+Authenicated users can delete or edit & update their own comment, this is not avaiable for non-authorised users.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_detail.png)
 
 ### Comment Filters
+Comments have filter fields by resource name.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_filter.png)
 
 ### Contact Form List
+List of all user created forms (forms/)
+
+User must be signin to view list of contact forms.
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/contact_list.png)
-
-
-
-
 
 ## Agile Development Process
 
