@@ -393,6 +393,26 @@ List of all user created resources (resources/)
 Authenicated users can create and post new resoures in the html form at the bottom, this form is not avaiable for non-authorised users.
 Title and URL are required, while Country filter will default to mixed, Resource type filter will deafult to Podcast/Audio and Difficulty level filter will default to Beginner.
 
+Resource POST example
+{
+	"id": 1,
+	"owner": "admin2",
+	"is_owner": false,
+	"profile_id": 2,
+	"profile_image": "https://res.cloudinary.com/dlnmcty8k/image/upload/v1/media/../default_profile_nhnsof",
+	"created_at": "14 Sep 2023",
+	"updated_at": "15 Sep 2023",
+	"title": "Dreaming Spanish",
+	"image": "https://res.cloudinary.com/dlnmcty8k/image/upload/v1/media/../default_post_ve6bmd",
+	"resource_url": "https://www.dreamingspanish.com/",
+	"country_filter": "mixed",
+	"resource_type_filter": "youtube",
+	"difficulty_level_filter": "learner",
+	"favourite_id": 1,
+	"favourites_count": 2,
+	"desc": ""
+}
+
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_list.png)
 
 ### Resource Detail Page
@@ -410,6 +430,15 @@ Resources has mutiple filters for ordering, searching and filter by field.
 ### Favourite List Page
 List of all user created favourites (favourites/)
 Authenicated users can favourite any resource in the html form at the bottom, this form is not avaiable for non-authorised users.
+If favourites a resource they have already favoutited they will be a "possible duplicate" message.
+
+Favourite POST example
+{
+    "id": 1,
+    "created_at": "14 Sep 2023",
+    "owner": "admin",
+    "resource": 1
+}
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/favourites_list.png)
 
@@ -423,6 +452,19 @@ Authenicated users can favourite can delete their own favourite from a resource,
 List of all user created comments (comments/)
 Authenicated users can comment on any resource, this is not avaiable for non-authorised users.
 Content is a requirement before posting.
+
+Comment POST example
+{
+    "id": 1,
+    "owner": "admin",
+    "is_owner": true,
+    "profile_id": 1,
+    "profile_image": "https://res.cloudinary.com/dlnmcty8k/image/upload/v1/media/../default_profile_nhnsof",
+    "resource": 1,
+    "created_at": "4 days, 2 hours ago",
+    "updated_at": "4 days, 2 hours ago",
+    "content": "So good"
+}
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_list.png)
 
@@ -439,8 +481,17 @@ Comments have filter fields by resource name.
 
 ### Contact Form List
 List of all user created forms (forms/)
-
 User must be signin to view list of contact forms.
+
+ContactForm POST example
+{
+    "id": 4,
+    "name": "Dan Smith",
+    "email": "dan@smith.com",
+    "subject": "Feature request",
+    "message": "Add link to reading resources",
+	"created_at": "21 Sep 2023"
+}
 
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/contact_list.png)
 
