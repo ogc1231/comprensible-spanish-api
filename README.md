@@ -546,10 +546,7 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 ## Modules
 
-![Modules used]()
-
-## Languages
-- Python - The base language of the Django REST Framework
+![Modules used](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/modules.PNG)
 
 ## Libraries
 - Django Cloudinary Storage
@@ -561,12 +558,17 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 ## Frameworks
 - Django REST Framework
 
-## Platforms
-- Cloudinary - Storage of image files
-- Github - Repository with Git version control
-- GitPod - IDE used for development
-- Heroku - Hosting of DRF database (until November 2022)
-- ElephantSQL - Hosting of DRF database (from November 2022)
+## Tools & Technologies Used
+- [Python](https://www.python.org) used as the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
+- [Django](https://www.djangoproject.com) used as the Python framework for the site.
+- [Django REST Framework](https://www.django-rest-framework.org/) used build the backend api.
+- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
+- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
+- [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
+- [Cloudinary](https://cloudinary.com) used for online static file storage.
 
 
 
