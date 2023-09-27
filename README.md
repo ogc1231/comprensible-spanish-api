@@ -264,59 +264,200 @@ Feel free to delete any unused items below as necessary.
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+- [LucidChart](https://www.lucidchart.com/pages/) was used to create the Entity Relationship Diagram
 
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/ERD.PNG)
 
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+class Profile(models.Model):
+    owner = models.OneToOneField(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    name = models.CharField(max_length=255, blank=True)
+    image = models.ImageField(
+        upload_to='images/', default='../default_profile_nhnsof'
+    )
+
+    class Meta:
+        ordering = ['-created_at']
 
     def __str__(self):
-        return self.name
+        return f"{self.owner}'s profile"
+
+
+def create_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(owner=instance)
+
+
+post_save.connect(create_profile, sender=User)
 ```
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+- **Profile**
 
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/erd.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Table: **Product**
-
-    | **PK** | **id** (unique) | Type | Notes |
+    | **KEY** | **id** | Type |
     | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
+	| **PK** | **id** | AutoField |
+    | **FK** | owner | ForeignKey |
+    | | created_at | DateTimeField |
+    | | updated_at | DateTimeField |
+    | | name | CharField |
+    | | image | ImageField (Cloudinary) |
+
+```python
+class Resource(models.Model):
+    country_filter_choices = [
+        ('mixed', 'Mixed'),
+        ('argentina', 'Argentina'),
+        ('bolivia', 'Bolivia'),
+        ('canary_islands', 'Canary Islands'),
+        ('chile', 'Chile'),
+        ('colombia', 'Colombia'),
+        ('costa_rica', 'Costa Rica'),
+        ('cuba', 'Cuba'),
+        ('dominican_republic', 'Dominican Republic'),
+        ('ecuador', 'Ecuador'),
+        ('el_salvador', 'El Salvador'),
+        ('equatorial_guinea', 'Equatorial Guinea'),
+        ('guatemala', 'Guatemala'),
+        ('honduras', 'Honduras'),
+        ('mexico', 'Mexico'),
+        ('nicaragua', 'Nicaragua'),
+        ('panama', 'Panama'),
+        ('paraguay', 'Paraguay'),
+        ('puerto_rico', 'Puerto Rico'),
+        ('peru', 'Peru'),
+        ('spain', 'Spain'),
+        ('uruguay', 'Uruguay'),
+        ('venezuela', 'Venezuela'),
+    ]
+
+    resource_type_filter_choices = [
+        ('podcast', 'Podcast/Audio'),
+        ('youtube', 'YouTube/Video'),
+    ]
+
+    difficulty_level_filter_choices = [
+        ('beginner', 'Beginner'),
+        ('intermediate', 'Intermediate'),
+        ('advanced', 'Advanced'),
+        ('easy_native', 'Easy Native'),
+        ('adv_native', 'Adv Native'),
+    ]
+
+    owner = models.ForeignKey(User, on_delete=models.PROTECT)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=255)
+    desc = models.TextField(blank=True)
+    image = models.ImageField(
+        upload_to='images/', default='../default_post_ve6bmd', blank=True
+    )
+    resource_url = models.URLField(max_length=255, unique=True)
+    country_filter = models.CharField(
+        max_length=32, choices=country_filter_choices
+    )
+    resource_type_filter = models.CharField(
+        max_length=32, choices=resource_type_filter_choices,
+    )
+    difficulty_level_filter = models.CharField(
+        max_length=32, choices=difficulty_level_filter_choices
+    )
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+```
+
+- **Resource**
+
+    | **KEY** | **id** | Type |
+    | --- | --- | --- | --- |
+	| **PK** | **id** | AutoField |
+    | **FK** | owner | ForeignKey |
+    | | created_at | DateTimeField |
+    | | updated_at | DateTimeField |
+    | | title | CharField |
+	| | desc | TextField |
+    | | image | ImageField (Cloudinary) |
+	| | resource_url | URLField |
+	| | country_filter | CharField |
+	| | resource_type_filter | CharField |
+	| | difficulty_level_filter | CharField |
+
+```python
+class Favourite(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    resource = models.ForeignKey(
+        Resource, related_name='favourites', on_delete=models.CASCADE
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        unique_together = ['owner', 'resource']
+
+    def __str__(self):
+        return f'{self.owner} {self.resource}'
+```
+
+- **Favourite**
+
+    | **KEY** | **id** | Type |
+    | --- | --- | --- | --- |
+	| **PK** | **id** | AutoField |
+    | **FK** | owner | ForeignKey |
+    | | created_at | DateTimeField |
+
+```python
+class Comment(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    resource = models.ForeignKey(Resource, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    content = models.TextField()
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return self.content
+```
+
+- **Comment**
+
+    | **KEY** | **id** | Type |
+    | --- | --- | --- | --- |
+	| **PK** | **id** | AutoField |
+    | **FK** | owner | ForeignKey |
+	| **FK** | resource | ForeignKey |
+    | | created_at | DateTimeField |
+    | | updated_at | DateTimeField |
+	| | content | TextField |
+
+```python
+class ContactForm(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    subject = models.CharField(max_length=50, blank=True)
+    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.name}'
+```
+
+- **ContactForm**
+
+    | **KEY** | **id** | Type |
+    | --- | --- | --- | --- |
+	| **PK** | **id** | AutoField |
+    | | name | CharField |
+	| | email | EmailField |
+	| | subject | CharField |
+	| | message | TextField |
+    | | created_at | DateTimeField |
 
 ## Agile Development Process
 
