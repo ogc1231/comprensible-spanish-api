@@ -204,11 +204,3 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-EMAIL_HOST = '<smtp.yourserver.com>'
-EMAIL_HOST_USER = 'your@djangoapp.com'
-EMAIL_HOST_PASSWORD ='your password'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_TIMEOUT = 300 # in seconds
-DEFAULT_FROM_EMAIL = 'sender name <your@djangoapp.com>'
