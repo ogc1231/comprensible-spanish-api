@@ -496,51 +496,35 @@ ContactForm POST example
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/contact_list.png)
 
 ## Agile Development Process
-
 ### GitHub Projects
-
 [GitHub Projects](https://github.com/ogc1231/comprensible-spanish-api/projects) served as an Agile tool for this project.
-It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
 
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+Through it, issues, and milestone tasks were planned and tracked using the basic Kanban board.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot]()
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/KANBAN.png)
 
 ### GitHub Issues
-
 [GitHub Issues](https://github.com/ogc1231/comprensible-spanish-api/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories.
 
-It also helped with milestone iterations on a weekly basis.
+There, I used my own **templates** to manage issues.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/issues.png)
 
-Consider adding a screenshot of your Open and Closed Issues.
+### GitHub Milestones
+[GitHub Milestones](https://github.com/ogc1231/comprensible-spanish-api/milestones) served as an another Agile tool.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+There, I used my own **milestones** to group issues.
 
-- [Open Issues](https://github.com/ogc1231/comprensible-spanish-api/issues)
-
-    ![screenshot](documentation/gh-issues-open.png)
-
-- [Closed Issues](https://github.com/ogc1231/comprensible-spanish-api/issues?q=is%3Aissue+is%3Aclosed)
-
-    ![screenshot](documentation/gh-issues-closed.png)
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/milestones.png)
 
 ### MoSCoW Prioritization
 
 I've decomposed my Epics into stories prior to prioritizing and implementing them.
 Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
 
-- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
-- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
-- **Could Have**: has small impact if left out (*20% of stories*)
+- **Must Have**: guaranteed to be delivered
+- **Should Have**: adds significant value, but not vital
+- **Could Have**: has small impact if left out
 - **Won't Have**: not a priority for this iteration
 
 ## Testing & Bugs
