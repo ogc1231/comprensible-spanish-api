@@ -369,23 +369,56 @@ The following section describes the features of the API. The Djange REST Framewo
 
 ### Root Page
 
+![screenshot]()
+
 ### Profile List Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_list.png)
+
 ### Profile Detail Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_detail.png)
+
 ### Profile Filters
 
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/profiles_filter.png)
+
 ### Resource List Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_list.png)
+
 ### Resource Detail Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_detail.png)
+
 ### Resource Filters
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/resources_filter.png)
 
 
 ### Favourite List Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/favourites_list.png)
+
 ### Favourite Detail Page
 
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/favourites_detail.png)
+
 ### Comment List Page
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_list.png)
+
 ### Comment Detail
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_detail.png)
+
 ### Comment Filters
 
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/comments_filter.png)
+
 ### Contact Form List
+
+![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/contact_list.png)
 
 
 
@@ -406,7 +439,7 @@ Consider adding a basic screenshot of your Projects Board.
 
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
-![screenshot](documentation/gh-projects.png)
+![screenshot]()
 
 ### GitHub Issues
 
