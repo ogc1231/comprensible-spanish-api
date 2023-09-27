@@ -39,7 +39,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '8000-ogc1231-comprensiblespa-u169fvemnfc.ws-eu104.gitpod.io']  # noqa
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'localhost', '8000-ogc1231-comprensiblespa-u169fvemnfc.ws-eu104.gitpod.io', '8000-ogc1231-comprensiblespa-u169fvemnfc.ws-eu105.gitpod.io']  # noqa
 
 CLIENT_ORIGIN_DEV = [os.environ.get('CLIENT_ORIGIN')]
 
