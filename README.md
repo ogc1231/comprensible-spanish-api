@@ -363,6 +363,34 @@ The following list will give a brief overview of the available API andpoints
 | comments/<int:pk>/ |  |
 | forms/ |  |
 
+## Features
+The following section describes the features of the API. The Djange REST Framework built in API browser is used to display snapshots of the individual features, as raw json is not as readable.
+
+
+### Root Page
+
+### Profile List Page
+### Profile Detail Page
+### Profile Filters
+
+### Resource List Page
+### Resource Detail Page
+### Resource Filters
+
+
+### Favourite List Page
+### Favourite Detail Page
+
+### Comment List Page
+### Comment Detail
+### Comment Filters
+
+### Contact Form List
+
+
+
+
+
 ## Agile Development Process
 
 ### GitHub Projects
