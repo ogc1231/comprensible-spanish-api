@@ -296,7 +296,7 @@ post_save.connect(create_profile, sender=User)
 - **Profile**
 
     | **KEY** | **id** | Type |
-    | --- | --- | --- | --- |
+    | --- | --- | --- |
 	| **PK** | **id** | AutoField |
     | **FK** | owner | ForeignKey |
     | | created_at | DateTimeField |
@@ -373,7 +373,7 @@ class Resource(models.Model):
 - **Resource**
 
     | **KEY** | **id** | Type |
-    | --- | --- | --- | --- |
+    | --- | --- | --- |
 	| **PK** | **id** | AutoField |
     | **FK** | owner | ForeignKey |
     | | created_at | DateTimeField |
@@ -405,7 +405,7 @@ class Favourite(models.Model):
 - **Favourite**
 
     | **KEY** | **id** | Type |
-    | --- | --- | --- | --- |
+    | --- | --- | --- |
 	| **PK** | **id** | AutoField |
     | **FK** | owner | ForeignKey |
     | | created_at | DateTimeField |
@@ -428,7 +428,7 @@ class Comment(models.Model):
 - **Comment**
 
     | **KEY** | **id** | Type |
-    | --- | --- | --- | --- |
+    | --- | --- | --- |
 	| **PK** | **id** | AutoField |
     | **FK** | owner | ForeignKey |
 	| **FK** | resource | ForeignKey |
@@ -451,7 +451,7 @@ class ContactForm(models.Model):
 - **ContactForm**
 
     | **KEY** | **id** | Type |
-    | --- | --- | --- | --- |
+    | --- | --- | --- |
 	| **PK** | **id** | AutoField |
     | | name | CharField |
 	| | email | EmailField |
