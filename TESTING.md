@@ -52,4 +52,22 @@ All urls were tested (development and deployed) make sure they are all working c
 | /comments/id | Pass | Pass |
 | /forms| Pass | Pass |
 
+### CRUD Testing
+All apps were tested to ensure appropriate CRUD functionality was present in the development version of the API
+
+| APP | Create | Read | Update | Delete |
+| --- | --- | --- | --- | --- |
+| Profiles(Create Superuser) | Pass | Pass | Pass | n/a |
+| Resources | Pass | Pass | Pass | Pass |
+| Favourites | Pass | Pass | n/a | Pass |
+| Comments | Pass | Pass | Pass | Pass |
+| Forms | Pass | Pass | n/a | n/a |
+
+### Search Testing
+Search functionality was tested on Resources, to ensure correct results were returned when searching by the relevant search fields.
+
+| APP | Search by Country | Search by Level | Search by Type | Search by Title |
+| --- | --- | --- | --- | --- |
+| Resources | Pass | Pass | Pass | Pass |
+
 ## Automated Testing
