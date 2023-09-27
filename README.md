@@ -340,6 +340,29 @@ class ContactForm(models.Model):
 	| | message | TextField |
     | | created_at | DateTimeField |
 
+
+## API EndPoints
+
+The following list will give a brief overview of the available API andpoints
+
+| **URL** | **Comment** |
+| --- | --- |
+| admin/ | django built in admin url |
+| dj-rest-auth/logout/ | dj-rest-auth package provided url |
+| dj-rest-auth/login/ | dj-rest-auth package provided url |
+| dj-rest-auth/user | dj-rest-auth package provided url |
+| dj-rest-auth/registration/ | dj-rest-auth package provided url |
+| dj-rest-auth/token/refresh | dj-rest-auth package provided url |
+| profiles/ |  |
+| profiles/int:pk/ |  |
+| resources/ |  |
+| resources/<int:pk>/ |  |
+| favourites/ |  |
+| favourites/<int:pk>/ |  |
+| comments/ |  |
+| comments/<int:pk>/ |  |
+| forms/ |  |
+
 ## Agile Development Process
 
 ### GitHub Projects
