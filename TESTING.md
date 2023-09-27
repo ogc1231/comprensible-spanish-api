@@ -71,3 +71,57 @@ Search functionality was tested on Resources, to ensure correct results were ret
 | Resources | Pass | Pass | Pass | Pass |
 
 ## Automated Testing
+
+## Bugs
+**Fixed Bugs**
+
+As previously mentioned, I did only start "counting" bugs when doing the testing of the front and back end application, hence the development process was finished. Since I did heavy testing during development, I could find potential issues already then. Therefore the list with bugs, found during the finalt testing round, is empty.
+
+| Bug | Status |
+| --- | --- |
+|  |  |
+
+## Unfixed Bugs
+
+There are no remaining bugs that I am aware of.
+
+---
+
+### GitHub **Issues**
+**Open Issues**
+There are no remaing open issues
+
+**Closed Issues**
+
+| Issue | Status |
+| --- | --- |
+| [APP 1: Profiles](https://github.com/ogc1231/comprensible-spanish-api/issues/1) | Closed |
+| [APP 2: Resources](https://github.com/ogc1231/comprensible-spanish-api/issues/2) | Closed |
+| [APP 3: Favourites](https://github.com/ogc1231/comprensible-spanish-api/issues/3) | Closed |
+| [APP 4: Comments](https://github.com/ogc1231/comprensible-spanish-api/issues/4) | Closed |
+| [APP 5: Forms](https://github.com/ogc1231/comprensible-spanish-api/issues/5) | Closed |
+| [APP 6: Resources CRUD Functionality](https://github.com/ogc1231/comprensible-spanish-api/issues/9) | Closed |
+| [APP 7: Comments CRUD Functionality](https://github.com/ogc1231/comprensible-spanish-api/issues/10) | Closed |
+| [APP 8: Favourites CRUD Functionality](https://github.com/ogc1231/comprensible-spanish-api/issues/11) | Closed |
+| [APP 9: Forms CRUD Functionality](https://github.com/ogc1231/comprensible-spanish-api/issues/13) | Closed |
+| [APP 10: Profiles CRUD Functionality](https://github.com/ogc1231/comprensible-spanish-api/issues/14) | Closed |
+| [APP 11: Profiles Filters](https://github.com/ogc1231/comprensible-spanish-api/issues/15) | Closed |
+| [APP 12: Resources Filters](https://github.com/ogc1231/comprensible-spanish-api/issues/16) | Closed |
+| [APP 13: Comments Filters](https://github.com/ogc1231/comprensible-spanish-api/issues/17) | Closed |
+| [SETUP & DEPLOYMENT: Initial Project Setup](https://github.com/ogc1231/comprensible-spanish-api/issues/6) | Closed |
+| [DOCUMENTATION 1: README](https://github.com/ogc1231/comprensible-spanish-api/issues/7) | Closed |
+| [DOCUMENTATION 2: TESTING](https://github.com/ogc1231/comprensible-spanish-api/issues/8) | Closed |
+| [SETUP & DEPLOYMENT: Heroku Deployment](https://github.com/ogc1231/comprensible-spanish-api/issues/12) | Closed |
+
+**Milestones**
+
+Milestones were used to break the development down into small managable chunks focusing on the most important elements first.
+
+| Milestone | Status |
+| --- | --- |
+| [MVP Release](https://github.com/ogc1231/sound-burger/milestone/1) | Closed |
+| [Second Iteration](https://github.com/ogc1231/sound-burger/milestone/2) | Closed |
+| [Third Iteration](https://github.com/ogc1231/sound-burger/milestone/5) | Closed |
+| [Bugs](https://github.com/ogc1231/sound-burger/milestone/6) | Open |
+| [Setup & Deployment](https://github.com/ogc1231/sound-burger/milestone/4) | Closed |
+| [Documentation & Testing](https://github.com/ogc1231/sound-burger/milestone/3) | Closed |
