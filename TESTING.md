@@ -2,7 +2,8 @@
 
 Return back to the [README.md](README.md) file.
 
-## Code Validation Python
+## Manual Testing
+### Code Validation Python
 
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
@@ -33,3 +34,22 @@ I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to 
 | resources/serializers.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_serilizers.png) | Pass: No Errors |
 | resources/urls.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_urls.png) | Pass: No Errors |
 | resources/views.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_views.png) | Pass: No Errors |
+
+
+### URL Testing
+All urls were tested (development and deployed) make sure they are all working correctly.
+
+| URL | Development | Deployed |
+| --- | --- | --- |
+| Root Route | Pass | Pass |
+| /profiles | Pass | Pass |
+| /profiles/id | Pass | Pass |
+| /resources | Pass | Pass |
+| /resources/id | Pass | Pass |
+| /favourites | Pass | Pass |
+| /favourites/id | Pass | Pass |
+| /comments | Pass | Pass |
+| /comments/id | Pass | Pass |
+| /forms| Pass | Pass |
+
+## Automated Testing
