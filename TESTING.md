@@ -1,10 +1,8 @@
 # Testing
-
 Return back to the [README.md](README.md) file.
 
 ## Manual Testing
 ### Code Validation Python
-
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
 | File | Screenshot | Notes |
@@ -34,7 +32,6 @@ I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to 
 | resources/serializers.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_serilizers.png) | Pass: No Errors |
 | resources/urls.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_urls.png) | Pass: No Errors |
 | resources/views.py | ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/testing-assets/resources_views.png) | Pass: No Errors |
-
 
 ### URL Testing
 All urls were tested (development and deployed) make sure they are all working correctly.
@@ -74,25 +71,17 @@ Search functionality was tested on Resources, to ensure correct results were ret
 
 ## Bugs
 **Fixed Bugs**
-
-As previously mentioned, I did only start "counting" bugs when doing the testing of the front and back end application, hence the development process was finished. Since I did heavy testing during development, I could find potential issues already then. Therefore the list with bugs, found during the finalt testing round, is empty.
-
-| Bug | Status |
-| --- | --- |
-|  |  |
+Errors in code "bugs" were fixed on discovery during development.
 
 ## Unfixed Bugs
 
 There are no remaining bugs that I am aware of.
 
----
-
 ### GitHub **Issues**
 **Open Issues**
-There are no remaing open issues
+There are no remaing open issues.
 
 **Closed Issues**
-
 | Issue | Status |
 | --- | --- |
 | [APP 1: Profiles](https://github.com/ogc1231/comprensible-spanish-api/issues/1) | Closed |
@@ -114,14 +103,11 @@ There are no remaing open issues
 | [SETUP & DEPLOYMENT: Heroku Deployment](https://github.com/ogc1231/comprensible-spanish-api/issues/12) | Closed |
 
 **Milestones**
-
-Milestones were used to break the development down into small managable chunks focusing on the most important elements first.
+Milestones were used to group issues.
 
 | Milestone | Status |
 | --- | --- |
-| [MVP Release](https://github.com/ogc1231/sound-burger/milestone/1) | Closed |
-| [Second Iteration](https://github.com/ogc1231/sound-burger/milestone/2) | Closed |
-| [Third Iteration](https://github.com/ogc1231/sound-burger/milestone/5) | Closed |
-| [Bugs](https://github.com/ogc1231/sound-burger/milestone/6) | Open |
-| [Setup & Deployment](https://github.com/ogc1231/sound-burger/milestone/4) | Closed |
-| [Documentation & Testing](https://github.com/ogc1231/sound-burger/milestone/3) | Closed |
+| [Documentation & Testing](https://github.com/ogc1231/comprensible-spanish-api/milestone/1) | Closed |
+| [Setup & Deployment](https://github.com/ogc1231/comprensible-spanish-api/milestone/2) | Closed |
+| [APP](https://github.com/ogc1231/comprensible-spanish-api/milestone/3) | Open |
+| [Bugs](https://github.com/ogc1231/comprensible-spanish-api/milestone/6) | Closed |
