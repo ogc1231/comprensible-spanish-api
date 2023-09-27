@@ -543,20 +543,32 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 - **Could Have**: has small impact if left out (*20% of stories*)
 - **Won't Have**: not a priority for this iteration
 
+## Testing & Bugs
+- All testing & bugs documentation can be found [here](/TESTING.md)
 
 ## Modules
-
 ![Modules used](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/modules.PNG)
 
-## Libraries
-- Django Cloudinary Storage
-- Pillow (image processing capabilities)
-- Django Rest Auth
-- PostgreSQL
-- Cors Headers
-
-## Frameworks
-- Django REST Framework
+- **asgiref==3.7.2** - [ASGI server & tools](https://pypi.org/project/asgiref/3.7.2/)
+- **cloudinary==1.34.0** - [Image & video management](https://pypi.org/project/cloudinary/1.34.0/)
+- **dj-database-url==0.5.0** - [Database URL config](https://pypi.org/project/dj-database-url/0.5.0/)
+- **dj-rest-auth==2.1.9** - [DRF authentication](https://pypi.org/project/dj-rest-auth/2.1.9/)
+- **Django==3.2.21** - [Web framework](https://pypi.org/project/Django/3.2.21/)
+- **django-allauth==0.44.0** - [Authentication app](https://pypi.org/project/django-allauth/0.44.0/)
+- **django-cloudinary-storage==0.3.0** - [Cloudinary storage](https://pypi.org/project/django-cloudinary-storage/0.3.0/)
+- **django-cors-headers==4.2.0** - [CORS headers](https://pypi.org/project/django-cors-headers/4.2.0/)
+- **django-filter==23.2** - [Queryset filtering](https://pypi.org/project/django-filter/23.2/)
+- **djangorestframework==3.14.0** - [REST framework](https://pypi.org/project/djangorestframework/3.14.0/)
+- **djangorestframework-simplejwt==4.7.2** - [JWT for DRF](https://pypi.org/project/djangorestframework-simplejwt/4.7.2/)
+- **gunicorn==21.2.0** - [WSGI HTTP server](https://pypi.org/project/gunicorn/21.2.0/)
+- **oauthlib==3.2.2** - [OAuth library](https://pypi.org/project/oauthlib/3.2.2/)
+- **Pillow==8.2.0** - [Image processing](https://pypi.org/project/Pillow/8.2.0/)
+- **psycopg2==2.9.7** - [PostgreSQL adapter](https://pypi.org/project/psycopg2/2.9.7/)
+- **PyJWT==2.8.0** - [JWT encoding/decoding](https://pypi.org/project/PyJWT/2.8.0/)
+- **python3-openid==3.2.0** - [OpenID for Python 3](https://pypi.org/project/python3-openid/3.2.0/)
+- **requests-oauthlib==1.3.1** - [OAuth for Requests](https://pypi.org/project/requests-oauthlib/1.3.1/)
+- **sqlparse==0.4.4** - [SQL parsing](https://pypi.org/project/sqlparse/0.4.4/)
+- **urllib3==1.26.16** - [HTTP client](https://pypi.org/project/urllib3/1.26.16/)
 
 ## Tools & Technologies Used
 - [Python](https://www.python.org) used as the back-end programming language.
@@ -569,8 +581,33 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
+- Django Cloudinary Storage
+- Pillow (image processing capabilities)
+- Django Rest Auth
+- Cors Headers
 
+## Deployment
+### ElephantSQL Database
 
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+- Click **Create New Instance** to start a new database.
+- Provide a name (this is commonly the name of the project: the-collection).
+- Select the **Tiny Turtle (Free)** plan.
+- You can leave the **Tags** blank.
+- Select the **Region** and **Data Center** closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+### Cloudinary API
+
+This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
+
+To obtain your own Cloudinary API key, create an account and log in.
+- For *Primary interest*, you can choose *Programmable Media for image and video API*.
+- Optional: *edit your assigned cloud name to something more memorable*.
+- On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
+- Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 
 ### Heroku Deployment
 
@@ -584,17 +621,13 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user's own value |
-| `AWS_SECRET_ACCESS_KEY` | user's own value |
+| `CLOUDINARY_URL` | user's own value |
 | `DATABASE_URL` | user's own value |
-| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
-| `EMAIL_HOST_PASS` | user's own value |
-| `EMAIL_HOST_USER` | user's own value |
+| `ALLOWED_HOST` | url of deployed DRF application, basically the current application |
 | `SECRET_KEY` | user's own value |
-| `STRIPE_PUBLIC_KEY` | user's own value |
-| `STRIPE_SECRET_KEY` | user's own value |
-| `STRIPE_WH_SECRET` | user's own value |
-| `USE_AWS` | True |
+| `CLIENT_ORIGIN` | url of deployed front end application, which is consuming this API |
+| `CLIENT_ORIGIN_DEV` | url of development front end application, which is consuming this API |
+| `DISABLE_COLLECTSTATIC` | 1 (this is temporary, and can be removed for the final deployment) |
 
 Heroku needs two additional files in order to deploy properly.
 - requirements.txt
@@ -638,15 +671,11 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
-os.environ.setdefault("DATABASE_URL", "user's own value")
-os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
-os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
-os.environ.setdefault("SECRET_KEY", "user's own value")
-os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
-os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
-os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+os.environ['DEV'] = '1'
+os.environ["CLOUDINARY_URL"] = "user's own value"
+os.environ['ALLOWED_HOST'] = "user's own value"
+os.environ['DATABASE_URL'] = "user's own value"
+os.environ["SECRET_KEY"] = "user's own value"
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
@@ -660,10 +689,6 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 - Create a superuser: `python3 manage.py createsuperuser`
 - Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
 - Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
-
-If you'd like to backup your database models, use the following command for each model you'd like to create a fixture for:
-- `python3 manage.py dumpdata your-model > your-model.json`
-- *repeat this action for each model you wish to backup*
 
 #### Cloning
 
@@ -694,39 +719,23 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
-
 ## Credits
 ### Content
 
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Pablo Embarach](https://github.com/PEmbarach/coffeeie/blob/main/src/pages/contact/ContactForm.js) | contact form | design |
+| [YoutUbe](https://www.youtube.com/watch?v=JD-age0BPVo&list=PLzMcBGfZo4-kCLWnGmK0jUBmGLaJxvi4j&ab_channel=TechWithTim) | DRF | research |
+| [YouTube](https://www.youtube.com/watch?v=rxRYEXBmM88&list=PLJRGQoqpRwdczZl-LndYIQ6ymybtUqT5G) | JWT | research |
+| [Django REST Framework](https://www.django-rest-framework.org/api-guide/permissions/) | contact form | permissions |
+| [Django REST Framework](https://www.django-rest-framework.org/topics/html-and-forms/) | contact form | forms |
 
 ### Media
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [Code Institute](https://codeinstitute.net) | profile and resource | Default images | profile and resources default images |
 
 ### Acknowledgements
 - I would like to thank my Code Institute mentors, [Aleksei (Alex) konovalov](https://github.com/lexach91) & [Jubril Akolade](https://github.com/Jubrillionaire) for their support throughout the development of this project.
