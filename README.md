@@ -1,5 +1,4 @@
 # COMPREHENSIBLE SPANISH RESOURCES DJANGO REST FRAMWEORK API
-
 This Django REST Framework API which works with the [FRONTEND](https://github.com/ogc1231/comprehensible-spanish-frontend) to create the Comprehensible Spanish Resources website. A user curated directory of Spanish Language resources to suit your needs whatever your level. The aim of this website to is provide a place where Spanish learners can find Comprehensible Spanish content that suits their needs whatever their level with resources ranging from those specifically designed for beginners to Advanced Native content all in one place. The advantage of this website is that users can upload resources which they have found useful and share them with other learners. The resources can also be filtered by dialect so users can hear the different accents of 20 different Spanish speaking countries, Puerto Rico & The Canary Islands.
 
 The objective of this project was to create a DJANGO REST FRAMWEORK API whos data is consumed by Front-End application made with REACT.js.
@@ -36,7 +35,6 @@ The objective of this project was to create a DJANGO REST FRAMWEORK API whos dat
 - [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
 
 ## Database Design
-
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
 Understanding the relationships between different tables can save time later in the project.
 
@@ -237,7 +235,6 @@ class ContactForm(models.Model):
 
 
 ## API EndPoints
-
 The following list will give a brief overview of the available API andpoints
 
 | **URL** | **Comment** |
@@ -413,8 +410,7 @@ There, I used my own **milestones** to group issues.
 ![screenshot](https://github.com/ogc1231/comprensible-spanish-api/blob/main/documentation/readme-assets/milestones.png)
 
 ### MoSCoW Prioritization
-
-I've decomposed my Epics into stories prior to prioritizing and implementing them.
+I decomposed my issues to help prioritise and implement them.
 Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
 
 - **Must Have**: guaranteed to be delivered
@@ -479,7 +475,6 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Once created, click on the new database name, where you can view the database URL and Password.
 
 ### Cloudinary API
-
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
 
 To obtain your own Cloudinary API key, create an account and log in.
@@ -489,7 +484,6 @@ To obtain your own Cloudinary API key, create an account and log in.
 - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 
 ### Heroku Deployment
-
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 Deployment steps are as follows, after account setup:
@@ -536,7 +530,6 @@ Or:
 The project should now be connected and deployed to Heroku!
 
 ### Local Deployment
-
 This project can be cloned or forked in order to make a local copy on your own system.
 
 For either method, you will need to install any applicable packages found within the *requirements.txt* file.
@@ -570,7 +563,6 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 - Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
 
 #### Cloning
-
 You can clone the repository by following these steps:
 
 1. Go to the [GitHub repository](https://github.com/ogc1231/comprensible-spanish-api) 
@@ -590,7 +582,6 @@ Please note that in order to directly open the project in Gitpod, you need to ha
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
 
 #### Forking
-
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
@@ -600,7 +591,6 @@ You can fork this repository by using the following steps:
 
 ## Credits
 ### Content
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
@@ -611,7 +601,6 @@ You can fork this repository by using the following steps:
 | [Django REST Framework](https://www.django-rest-framework.org/topics/html-and-forms/) | contact form | forms |
 
 ### Media
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Code Institute](https://codeinstitute.net) | profile and resource | Default images | profile and resources default images |
