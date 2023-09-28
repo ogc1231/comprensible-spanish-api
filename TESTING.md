@@ -68,6 +68,77 @@ Search functionality was tested on Resources, to ensure correct results were ret
 | Resources | Pass | Pass | Pass | Pass |
 
 ## Automated Testing
+I have conducted a series of automated tests on my application.
+
+I have tested the "Matches" and the "Guns" app via unit test.
+- [Resource Unit Testing](/resources/tests.py)
+
+I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive. However, I wanted to include a few example tests for CRUD functionality and permissions.
+
+### Python (Unit Testing)
+
+I have used Django's built-in unit testing framework to test the application functionality.
+
+In order to run the tests, I ran the following command in the terminal each time:
+
+`python3 manage.py test`
+
+All testcases are successfully executed:
+
+[screenshot](docs/testing/unit_matches_guns.png)
+
+ResourceListViewTests
+```python
+class ResourceListViewTests(APITestCase):
+    def setUp(self):
+        User.objects.create_user(username='sam', password='pass')
+
+    def test_can_list_resources(self):
+        sam = User.objects.get(username='sam')
+        Resource.objects.create(owner=sam, title='How to Spanish')
+        response = self.client.get('/resources/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        print(response.data)
+        print(len(response.data))
+
+    def test_user_not_logged_in_cant_create_resource(self):
+        response = self.client.post('/resources/', {'title': 'How to Spanish'})
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+```
+
+ResourceListViewTests
+```Python
+class ResourceDetailViewTests(APITestCase):
+    def setUp(self):
+        sam = User.objects.create_user(username='sam', password='pass')
+        tam = User.objects.create_user(username='tam', password='pass')
+        Resource.objects.create(
+            owner=sam, title='How to Spanish',
+            desc='sams content',
+            resource_url='www.dog.com'
+        )
+        Resource.objects.create(
+            owner=tam, title='Dreaming Spanish',
+            desc='tams content',
+            resource_url='www.cat.com'
+        )
+
+    def test_can_retrieve_resource_using_valid_id(self):
+        response = self.client.get('/resources/1/')
+        self.assertEqual(response.data['title'], 'How to Spanish')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_cant_retrieve_resource_using_invalid_id(self):
+        response = self.client.get('/resources/999/')
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_user_cant_update_another_users_resource(self):
+        self.client.login(username='sam', password='pass')
+        response = self.client.put(
+            '/resources/2/', {'title': 'Charlas Hispanas'}
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+```
 
 ## Bugs
 **Fixed Bugs**
