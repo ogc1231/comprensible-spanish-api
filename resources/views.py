@@ -7,7 +7,10 @@ from .serializers import ResourceSerializer
 
 
 class ResourceList(generics.ListCreateAPIView):
-
+    """
+    List all Resources.
+    Create view as Resource if you're the authenicated.
+    """
     serializer_class = ResourceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Resource.objects.annotate(
@@ -42,7 +45,9 @@ class ResourceList(generics.ListCreateAPIView):
 
 
 class ResourceDetail(generics.RetrieveUpdateDestroyAPIView):
-
+    """
+    Retrieve, update, edit & delete a Resource if you're the owner.
+    """
     serializer_class = ResourceSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Resource.objects.annotate(
