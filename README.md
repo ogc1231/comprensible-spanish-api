@@ -3,10 +3,6 @@ This Django REST Framework API which works with the [FRONTEND](https://github.co
 
 The objective of this project was to create a DJANGO REST FRAMWEORK API whos data is consumed by Front-End application made with REACT.js.
 
-[Link to live DRF API site](https://comp-spanish-api-35f1e1574e0f.herokuapp.com/)
-
-[Link to live React Frontend site](https://comp-spanish-frontend-811d88a7f64a.herokuapp.com/)
-
 [Link to Frontend React repository](https://github.com/ogc1231/comprehensible-spanish-frontend)
 
 ## Tools & Technologies Used
